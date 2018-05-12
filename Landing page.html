@@ -17,34 +17,6 @@
               
           }
       </style>
-      <script>
-      
-//          var arr = ['#a','#b','#c'];
-//         function myFunction(){ 
-//             for(var i=0; i<arr.length;i++){
-//              var btn = document.createElement("BUTTON");
-//              btn.setAttribute("href", `"${arr[i]}"`);
-//                  btn.innerHTML = "`Episode ${i}`";
-//
-//              document.body.appendChild(btn);
-//          }}
-          function createKeyboard()
-{
-   var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-   for(var i=0; i<str.length; i++)
-   {
-    var nextChar = str.charAt(i);
-    var btn = document.createElement("BUTTON");
-    btn.id = 'btn' + nextChar;
-    btn.innerHTML = nextChar;
-    btn.setAttribute("value", nextChar);
-    btn.setAttribute("text",nextChar);
-    btn.style.fontSize = "14px";
-    btn.style.backgroundColor = '#4CAF50';
-    document.body.appendChild(btn);
-    }
-};
-      </script>
   </head>
   <body>
       <div class="banner container-fluid text-center">
@@ -53,6 +25,6 @@
           </p>
           
       </div>
-      <div onload="createKeyboard()"></div>
+      <div id = "buttons" class = "episodeList"></div>
   </body>
 </html>
