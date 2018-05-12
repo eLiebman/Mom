@@ -89,7 +89,7 @@ for (i=0; i<episodes.length; i++){
   const season = episodes[i].season;
   const episode = episodes[i].episode;
   const link = episodes[i].link;
-  const button = `<button value="${link}" class="btn btn-primary">Season ${season} Episode ${episode}</button>`;
+  const button = `<button value="${link}" class="butt btn btn-secondary">Episode ${episode}</button>`;
   if (season === 1) {
     $seasonOne.append(button);
   } else {
@@ -107,5 +107,10 @@ $('.episodeList').on('click', function(e){
     episodeCode = e.target.value;
     localStorage.episodeCode = episodeCode;
     loadNewVideo(episodeCode);
+    $('.btn-primary')
+        .addClass('btn-secondary')
+        .removeClass('btn-primary');
+    e.target.removeClass('btn-secondary');
+    e.target.addClass('btn-primary');
   }
 });
