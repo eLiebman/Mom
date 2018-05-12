@@ -107,10 +107,5 @@ $('.episodeList').on('click', function(e){
     episodeCode = e.target.value;
     localStorage.episodeCode = episodeCode;
     loadNewVideo(episodeCode);
-    $('.btn-primary')
-        .addClass('btn-secondary')
-        .removeClass('btn-primary');
-    e.target.removeClass('btn-secondary');
-    e.target.addClass('btn-primary');
   }
 });
