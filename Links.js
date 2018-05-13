@@ -100,7 +100,7 @@ for (i=0; i<episodes.length; i++){
 // When episode list receives a click
 $('.episodeList').on('click', function(e){
   //check that it's a new episode
-  if (episodeCode === e.target.value){
+  if (e.target.tagName !== 'BUTTON' || episodeCode === e.target.value){
     return;
   } else{
     // load new video
